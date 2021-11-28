@@ -9,7 +9,7 @@ const requestOptions = {
     'limit': '5000',
     'convert': 'USD'
   },
-  headers: {
+  headers: { 
     'X-CMC_PRO_API_KEY': 'c94fbe3f-5b90-4820-8e7e-f8792db7d915'
   },
   json: true,
