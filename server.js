@@ -7,7 +7,7 @@ const handlebars= require('express-handlebars')
 const bodyparser = require('body-parser')
 const express= require('express')
 const path= require('path')
-const routes = require('./routes');
+const routes = require('./controllers');
 const { Sequelize } = require('sequelize');
 const User = require('./models/user')
 
@@ -20,6 +20,8 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieparser())
+
+//track user across session
 app.use (session({
   key: 'user_sid',
   secret: 'somerandonstuffs',
@@ -28,6 +30,8 @@ app.use (session({
   cookie: {
       expires: 600000}
 }))
+
+
 
 const sequelize = new Sequelize('crypto_table', 'root', 'dal123456789+', {
   host: 'localhost',
