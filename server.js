@@ -39,18 +39,18 @@ const sess = {
   }),
 };
 
-const sequelize = new Sequelize("crypto_table", "root", "dal123456789+", {
-  host: "localhost",
-  dialect: "mysql",
-  port: 3001,
-});
+// const sequelize = new Sequelize("crypto_table", "root", "dal123456789+", {
+//   host: "localhost",
+//   dialect: "mysql",
+//   port: 3001,
+// });
 
-try {
-  sequelize.authenticate();
-  console.log("Connection has been established successfully.");
-} catch (error) {
-  console.error("Unable to connect to the database:", error);
-}
+// try {
+//   sequelize.authenticate();
+//   console.log("Connection has been established successfully.");
+// } catch (error) {
+//   console.error("Unable to connect to the database:", error);
+// }
 
 app.use(session(sess));
 

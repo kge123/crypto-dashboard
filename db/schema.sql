@@ -1,3 +1,3 @@
-DROP DATABASE IF EXISTS crypto_table;
+DROP DATABASE IF EXISTS cryptotable_db;
 
-CREATE DATABASE crypto_table;
+CREATE DATABASE cryptotable_db;
