@@ -6,6 +6,8 @@
     "axios": "^0.24.0",
     "bcrypt": "^5.0.1",
     "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.10",
+    "coingecko-api": "^1.0.10",
     "connect-session-sequelize": "^7.1.2",
     "cookie-parser": "^1.4.6",
     "dotenv": "^10.0.0",
@@ -17,6 +19,7 @@
     "path": "^0.12.7",
     "request": "^2.88.2",
     "request-promise": "^4.2.6",
+    "require": "^2.4.20",
     "sequelize": "^6.3.5"
   },
   "devDependencies": {},
