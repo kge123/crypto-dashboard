@@ -55,33 +55,33 @@ async function pricefeed(){
         
         }
         })
-
-    return coinArr
+        console.log(coinArr)
+    // return coinArr
     } catch(err){
         console.log(err)
     }
 }
 
-const app =express()
+// const app =express()
 
-app.get('/api/price-feed', async (req,res)=>{
-    try{
-        const pricefeed= await pricefeed()
+// app.get('/api/price-feed', async (req,res)=>{
+//     try{
+//         const pricefeed= await pricefeed()
 
-        return res.status(200).json({
-            result:pricefeed,
-        })
-    }
-    catch(err){
-        return res.status(500).json({
-            err: err.toString(),
-        })
-    }
-})
+//         return res.status(200).json({
+//             result:pricefeed,
+//         })
+//     }
+//     catch(err){
+//         return res.status(500).json({
+//             err: err.toString(),
+//         })
+//     }
+// })
 
-app.listen(3000,()=>{
-    console.log('running on port 3000')
-})
+// app.listen(3000,()=>{
+//     console.log('running on port 3000')
+// })
 
 pricefeed()
 
