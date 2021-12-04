@@ -39,7 +39,43 @@ const sess = {
   }),
 };
 
-// const sequelize = new Sequelize("crypto_table", "root", "dal123456789+", {
+
+
+
+
+
+
+
+
+
+// const rp = require('request-promise');
+// const requestOptions = {
+//   method: 'GET',
+//   uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
+    
+//   qs: {
+//     'start': '1',
+//     'limit': '5000',
+//     'convert': 'USD'
+//   },
+//   headers: { 
+//     'X-CMC_PRO_API_KEY': 'c94fbe3f-5b90-4820-8e7e-f8792db7d915'
+//   },
+//   json: true,
+//   gzip: true
+// };
+// let name=''
+// rp(requestOptions).then(response => {
+//   name = response
+//    console.log('API call response:', response);
+// }).catch((err) => {
+//   console.log('API call error:', err.message);
+// });
+
+
+
+
+// const sequelize = new Sequelize("cryptotable_db", "root", "dal123456789+", {
 //   host: "localhost",
 //   dialect: "mysql",
 //   port: 3001,
@@ -67,5 +103,5 @@ app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log("Now listening"));
+  app.listen(PORT, () => console.log('Server listening on: http://localhost:' + PORT));
 });
