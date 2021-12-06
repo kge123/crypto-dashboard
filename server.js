@@ -1,6 +1,6 @@
 const session = require("express-session");
 const exphbs = require("express-handlebars");
-// const bodyparser = require("body-parser");
+const bodyparser = require("body-parser");
 const express = require("express");
 const path = require("path");
 const routes = require("./controllers");
@@ -39,55 +39,6 @@ const sess = {
   }),
 };
 
-
-
-
-
-
-
-
-
-
-// const rp = require('request-promise');
-// const requestOptions = {
-//   method: 'GET',
-//   uri: 'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
-    
-//   qs: {
-//     'start': '1',
-//     'limit': '5000',
-//     'convert': 'USD'
-//   },
-//   headers: { 
-//     'X-CMC_PRO_API_KEY': 'c94fbe3f-5b90-4820-8e7e-f8792db7d915'
-//   },
-//   json: true,
-//   gzip: true
-// };
-// let name=''
-// rp(requestOptions).then(response => {
-//   name = response
-//    console.log('API call response:', response);
-// }).catch((err) => {
-//   console.log('API call error:', err.message);
-// });
-
-
-
-
-// const sequelize = new Sequelize("cryptotable_db", "root", "dal123456789+", {
-//   host: "localhost",
-//   dialect: "mysql",
-//   port: 3001,
-// });
-
-// try {
-//   sequelize.authenticate();
-//   console.log("Connection has been established successfully.");
-// } catch (error) {
-//   console.error("Unable to connect to the database:", error);
-// }
-
 app.use(session(sess));
 
 const hbs = exphbs.create({ helpers });
@@ -96,6 +47,7 @@ app.engine("handlebars", hbs.engine);
 app.set("view engine", "handlebars");
 
 app.use(express.json());
+// app.use(bodyparser.json)
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 // app.use(cookieparser());
