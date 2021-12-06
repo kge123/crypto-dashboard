@@ -1,9 +1,7 @@
 
 const axios= require('axios')
 const cheerio = require('cheerio')
-const express =require ('express')
-
-
+const router = require('express').Router();
 
 async function pricefeed(){
     try{
@@ -55,35 +53,34 @@ async function pricefeed(){
         
         }
         })
-        console.log(coinArr)
-    // return coinArr
+        // console.log(coinArr)
+    return coinArr
     } catch(err){
         console.log(err)
     }
 }
 
-// const app =express()
 
-// app.get('/api/price-feed', async (req,res)=>{
-//     try{
-//         const pricefeed= await pricefeed()
+router.get('/feed', async (req,res)=>{
+    try{
+        const pricefeedval= await pricefeed()
+        res.json(200, pricefeedval)
+        // res.status(200).json(pricefeedval)
+        // return res.status(200).json({
+        //     result:pricefeedval,
+        // })
+    }
+    catch(err){
+        return res.status(500).json({
+            err: err.toString(),
+        })
+    }
+})
 
-//         return res.status(200).json({
-//             result:pricefeed,
-//         })
-//     }
-//     catch(err){
-//         return res.status(500).json({
-//             err: err.toString(),
-//         })
-//     }
-// })
+module.exports = router;
 
-// app.listen(3000,()=>{
-//     console.log('running on port 3000')
-// })
 
-pricefeed()
+
 
 
 

@@ -1,12 +1,4 @@
-// var Sequalize = require('sequelize')
-// var bcrypt = require('bcrypt')
-// var cookieparser= require('express-session')
-// var morgan = require("morgan")
-// var User = require ('./models/user')
-// var handlebars= require('express-handlebars')
-// var bodyparser = require('body-parser')
-// var express= require('express')
-// var path= require('path')
+
 
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
