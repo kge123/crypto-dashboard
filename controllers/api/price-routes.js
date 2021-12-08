@@ -2,7 +2,7 @@
 const axios= require('axios')
 const cheerio = require('cheerio')
 const router = require('express').Router();
-
+const definitions = require('../../seeds/coinDefinitions.json')
 async function pricefeed(){
     try{
         const URL= 'https://coinmarketcap.com/'
@@ -77,6 +77,16 @@ router.get('/feed', async (req,res)=>{
     }
 })
 
+router.get('/definitions', async (req,res)=>{
+    try{
+        res.json(200, definitions)
+    }
+    catch(err){
+        return res.status(500).json({
+            err: err.toString(),
+        })
+    }
+})
 module.exports = router;
 
 
