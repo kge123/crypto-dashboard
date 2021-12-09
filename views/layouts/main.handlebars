@@ -4,9 +4,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Museum</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
+  <title>Crypto World</title>
+  {{!-- <link rel="stylesheet" type="text/css" href="/css/jass.css">
+  <link rel="stylesheet" type="text/css" href="/css/style.css"> --}}
 </head>
 
 <body>
@@ -15,7 +15,9 @@
   </header>
   <nav>
     <a href="/">Home</a>
-    <a href="/dashboard">Dashboard</a>
+    <a href="/dashboard">Top 100</a>
+    <a href="/definitions">Crypto Encyclo</a>
+    <a href="/search">Search Crypto</a>
     <!-- If the user is logged in, show a logout button -->
     {{#if loggedIn}}
     <button id="logout" class="btn-no-style">Logout</button>
@@ -23,8 +25,6 @@
     <!-- Otherwise, show a link to login -->
     <a href="/login">Login</a>
     {{/if}}
-    <a href="/definitions">Crypto Encyclo</a>
-    <a href="/watchlist">Search Crypto</a>
   </nav>
   <main>
     <aside>
