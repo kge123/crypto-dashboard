@@ -87,12 +87,34 @@ router.get('/definitions', async (req,res)=>{
         })
     }
 })
-module.exports = router;
+
+
+router.post("/watchlist",(req,res)=>{
+    const fs = require('fs')
+    writepath = '.js/watchlist.js'
+    // Get all notes from de.json
+    let all_notes = fs.readFileSync(writepath, 'utf8')
+    let notes = JSON.parse(all_notes)
+    // Create new json object for input data
+    var title = req.body.title
+    var text =req.body.text
+    let new_note = {
+      "id": uuid(),
+      "title":title,
+      "text":text
+    }
+    // Put new object into old notes json and save it into file
+    notes.push(new_note)
+    all_notes = JSON.stringify(notes)
+    fs.writeFileSync(writepath, all_notes, "utf-8")
+    // console.log( 'Title:' +title+ 'Notes:'+ notes)
+    // res.end('yes')
+    // fs.appendFileSync(writepath,`${process.env[2]}`,(err)=> err ? console.log(err):console.log('commit log'))
+  })
 
 
 
-
-
+  module.exports = router;
 
  
 

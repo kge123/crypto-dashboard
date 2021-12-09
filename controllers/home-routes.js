@@ -8,6 +8,11 @@ router.get("/", async (req, res) => {
   res.render("homepage", { loggedIn: req.session.loggedIn });
 
 });
+
+router.get("/watchlist", async (req, res) => {
+  res.render("watchlist", { loggedIn: req.session.loggedIn });
+
+});
 // rendering sql data
 
 // router.get('/dashboard',async (req,res)=>{
