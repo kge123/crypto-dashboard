@@ -9,8 +9,8 @@ router.get("/", async (req, res) => {
 
 });
 
-router.get("/watchlist", async (req, res) => {
-  res.render("watchlist", { loggedIn: req.session.loggedIn });
+router.get("/search", async (req, res) => {
+  res.render("searchcrypto", { loggedIn: req.session.loggedIn });
 
 });
 // rendering sql data
