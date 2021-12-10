@@ -150,8 +150,6 @@
 // }
 // getAndRenderNotes();
 
-
-
 // app.post("/api/notes",(req,res)=>{
 //     const fs = require('fs')
 //     writepath = 'develop/db/de.json'
@@ -174,48 +172,6 @@
 //     // res.end('yes')
 //     // fs.appendFileSync(writepath,`${process.env[2]}`,(err)=> err ? console.log(err):console.log('commit log'))
 //   })
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // document
 //     .querySelector('.watchlist')
