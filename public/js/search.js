@@ -595,6 +595,19 @@ function searchFormHandler(e) {
       document.getElementById("APIDATA").append(definition);
 
   }
+  switch (input) {
+    case "Binance Coin":
+      definition = document.createElement("p");
+      definition.textContent =
+        "Launched in July 2017, Binance is the biggest cryptocurrency exchange globally based on daily trading volume. Binance aims to bring cryptocurrency exchanges to the forefront of financial activity globally. The idea behind Binance's name is to show this new paradigm in global finance — Binary Finance, or Binance. Aside from being the largest cryptocurrency exchange globally, Binance has launched a whole ecosystem of functionalities for its users. The Binance network includes the Binance Chain, Binance Smart Chain, Binance Academy, Trust Wallet and Research projects, which all employ the powers of blockchain technology to bring new-age finance to the world. Binance Coin is an integral part of the successful functioning of many of the Binance sub-projects. Binance is a unique ecosystem of decentralized, blockchain-based networks. The company has grown to be the leading crypto exchange in a number of countries, and their side organizations are attracting significant interest as well. One of the biggest competitive advantages Binance has is its drive for development. While the company started only as a crypto exchange back in 2017, today, Binance has spread its services among numerous different spheres. According to the company website, its mission is to become the infrastructure services provider for the entire blockchain ecosystem. Since launching the Binance Coin, the exchange has also benefited from increased investor interest in the token. BNB went through a significant price increase at the beginning of 2021, which has put it on the map of enterprise investors. Changpeng Zhao is the founder and CEO of Binance. In 2001, Zhao joined Bloomberg as head of tradebook futures development. He spent four years with the company and later joined Fusion Systems as a partner. Since 2013, Changpeng Zhao has been actively involved with blockchain technology and cryptocurrencies. He became head of development at Blockchain, and in 2015 he founded BijieTech. In 2017, Zhao officially launched Binance, and he has been the CEO of the company ever since. He Yi is a co-founder and chief marketing officer at Binance. She started her career as a TV anchor and presenter on China Travel TV in 2012. Later, in 2014, Yi co-founded OKCoin, which was the largest fiat-to-crypto exchange in China at the time. In 2017, she joined forces with Changpeng Zhao, and together they created the largest crypto exchange globally — Binance."
+      document.getElementById("APIDATA").append(definition);
+      break;
+    default:
+      definition = document.createElement("p");
+      definition.textContent = "";
+      document.getElementById("APIDATA").append(definition);
+
+  }
 
   document.getElementById("searchbar").value = "";
 
