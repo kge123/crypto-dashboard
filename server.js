@@ -4,7 +4,7 @@ const bodyparser = require("body-parser");
 const express = require("express");
 const path = require("path");
 const routes = require("./controllers");
-const helpers = require('./utils/helper')
+const helpers = require("./utils/helper");
 // const cookieParser = require("cookie-parser");
 // const { Sequelize } = require("sequelize");
 const sequelize = require("./config/connection");
@@ -55,5 +55,7 @@ app.use(routes);
 
 // sync sequelize models to the database, then turn on the server
 sequelize.sync({ force: false }).then(() => {
-  app.listen(PORT, () => console.log('Server listening on: http://localhost:' + PORT));
+  app.listen(PORT, () =>
+    console.log("Server listening on: http://localhost:" + PORT)
+  );
 });
