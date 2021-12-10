@@ -6,8 +6,7 @@ const getPrices = async () => {
 };
 var indexStart = 1;
 function createTable(prices) {
-  console.log(prices);
-  var table = document.createElement("table");
+  const tableBody = document.getElementById('tableCrypto').getElementsByTagName('tbody')[0]
   for (var i = 0; i < prices.length; i++) {
     //
     var tr = document.createElement("tr");
@@ -38,10 +37,20 @@ function createTable(prices) {
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
-    table.appendChild(tr);
+    tableBody.appendChild(tr);
     // }
   }
-  document.getElementById("APIDATA").appendChild(table);
+
+  // var divContainer = document.getElementById("APIDATA");
+  // divContainer.innerHTML = "";
+  // divContainer.appendChild(table);
+  // document.getElementById("APIDATA").appendChild(table);
+  // document.getElementById('ticker').innerHTML= prices.name.value;
+  // document.getElementById('Price').innerHTML= prices.price.value;
+  // document.getElementById('Volume').innerHTML= prices.circulatingSupply.value;
+  // document.getElementById('Supply').innerHTML= prices.volume.value;
+  
+ 
 }
 
 window.onload = function () {
