@@ -7,7 +7,7 @@ router.get("/", async (req, res) => {
   res.render("homepage", { loggedIn: req.session.loggedIn });
 });
 
-router.get("/search", async (req, res) => {
+router.get("/search", withAuth, async (req, res) => {
   res.render("searchcrypto", { loggedIn: req.session.loggedIn });
 });
 // rendering sql data

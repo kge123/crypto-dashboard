@@ -48,7 +48,7 @@
                 aria-labelledby="navbarDarkDropdownMenuLink"
               >
                 <li><a class="dropdown-item" href="/dashboard" style= "font-family: 'Bakbak One', cursive;">Top 100</a></li>
-                <li><a class="dropdown-item" href="/definitions" style= "font-family: 'Bakbak One', cursive;">Crypto Encyclo</a></li>
+                <li><a class="dropdown-item" href="/definitions" style= "font-family: 'Bakbak One', cursive;">Cryptopedia</a></li>
                 <li><a class="dropdown-item" href="/search" style= "font-family: 'Bakbak One', cursive;">Search Crypto</a></li>
                 <li><a
                     class="dropdown-item"
@@ -61,6 +61,18 @@
           </ul>
         </div>
       </div>
+      <nav>
+      {{!-- {{#if loggedIn}}
+      {{else}} --}}
+      <button type="button" class="btn btn-outline-secondary">
+          <a href="/login" class="link-light">Login</a>
+      </button>
+      {{!-- {{/if}}
+      {{#if loggedIn}} --}}
+        {{!-- <script src="/js/logout.js"></script> --}}
+      {{!-- {{/if}} --}}
+
+      </nav>
     </nav>
     <header>
       {{! <h1>Welcome to Crypto World</h1> }}
@@ -72,7 +84,7 @@
         {{! <button id="logout" class="btn-no-style">Logout</button> }}
       {{else}}
         <!-- Otherwise, show a link to login -->
-        <a href="/login">Login</a>
+        {{!-- <a href="/login">Login</a> --}}
       {{/if}}
     </nav>
     <main>
