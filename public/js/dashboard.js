@@ -6,7 +6,9 @@ const getPrices = async () => {
 };
 var indexStart = 1;
 function createTable(prices) {
-  const tableBody = document.getElementById('tableCrypto').getElementsByTagName('tbody')[0]
+  const tableBody = document
+    .getElementById("tableCrypto")
+    .getElementsByTagName("tbody")[0];
   for (var i = 0; i < prices.length; i++) {
     //
     var tr = document.createElement("tr");
@@ -49,8 +51,6 @@ function createTable(prices) {
   // document.getElementById('Price').innerHTML= prices.price.value;
   // document.getElementById('Volume').innerHTML= prices.circulatingSupply.value;
   // document.getElementById('Supply').innerHTML= prices.volume.value;
-  
- 
 }
 
 window.onload = function () {
