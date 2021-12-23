@@ -7,6 +7,7 @@ const logout = async () => {
     document.location.replace("/");
   } else {
     alert("Failed to log out.");
+    window.location.href = "https://tranquil-everglades-59089.herokuapp.com/";
   }
 };
 
